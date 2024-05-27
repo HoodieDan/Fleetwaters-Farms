@@ -6,6 +6,7 @@ import Crops from './pages/Crops';
 import Fishes from './pages/Fishes';
 import Livestock from './pages/Livestock';
 import Poultry from './pages/Poultry';
+import Contact from './pages/Contact';
 import FooterSection from './components/FooterSection';
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <Route path='/products/fishes' element={<Fishes />} />
           <Route path='/products/livestock' element={<Livestock />} />
           <Route path='/products/poultry' element={<Poultry />} />
+          <Route path='/contact' element={<Contact />} />
         </Routes>
       </div>
 

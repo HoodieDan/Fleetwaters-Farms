@@ -25,7 +25,7 @@ a:hover {
     color: #FFF;
 }
 
-input {
+input, textarea {
     background-color: #F3F3F3;
     border-radius: 10px;
     border: 0;

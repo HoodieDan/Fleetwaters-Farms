@@ -1,0 +1,68 @@
+@import './mixins.scss';
+
+div.contact {
+    .header {
+        padding: 5rem 2rem;
+        color: #FFF;
+        background-image: url('../images/contact-bg.png');
+        background-position: 0% 50%;
+        background-size: cover;
+
+        .container {
+            h2 {
+                font-weight: 700;
+            }
+        }
+    }
+
+    .container {
+        .row {
+            .col-lg-6 {
+                form {
+                    label {
+                        display: block;
+                        font-size: 0.9rem;
+                        font-weight: 500;
+                    }
+                    input, textarea {
+                        width: 100%;
+                        padding: 0.8rem 1.3rem;
+                    }
+                    button {
+                        white-space: nowrap;
+                        font-size: 0.8rem;
+                        background-color: $Green;
+                        border-radius: 10px;
+                        color: #FFF;
+                        padding: 0.5rem 1rem;
+                    }
+                }
+                iframe {
+                    width: 90%;
+                    border-radius: 10px;
+                    aspect-ratio: 1/1;
+                }
+                a {
+                    color: $TextColor;
+                }
+                .d-flex {
+                    font-weight: 500;
+
+                    .contact-icon {
+                        margin-right: 1rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .col-lg-6 {
+        padding: 1rem !important;
+ 
+        form {
+            padding-right: 0 !important;
+        }
+    }
+}
