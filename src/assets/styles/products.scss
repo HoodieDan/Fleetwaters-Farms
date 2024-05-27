@@ -1,0 +1,86 @@
+@import './mixins.scss';
+
+div.product {
+    .header {
+        padding: 5rem 2rem;
+        color: #FFF;
+        background: #04491D8A;
+
+        .container {
+            h2 {
+                font-weight: 700;
+            }
+        }
+    }
+    .livestock-header {
+        background-image: url('../images/livestock.jpg');
+        background-position: 0% 50%;
+        background-size: cover;
+    }
+    .poultry-header {
+        background-image: url('../images/poultry-bg.png');
+        background-position: 0% 50%;
+        background-size: cover;
+    }
+    .crops-header {
+        background-image: url('../images/crops-bg.png');
+        background-position: 0% 50%;
+        background-size: cover;
+    }
+    .fishes-header {
+        background-image: url('../images/fishes-bg.png');
+        background-position: 0% 50%;
+        background-size: cover;
+    }
+
+    .content {
+        background-image: url('../images/products-page-bg.png');
+        background-size: cover;
+    }
+
+    .quote-section {
+        .container {
+            .head {
+                text-align: center;
+
+                hr {
+                    background-color: $LineColor;
+                    height: 2px;
+                    width: 20%;
+                    border: none;
+                    position: relative;
+                    bottom: 50%;
+                }
+                h2 {
+                    font-weight: 600;
+                    color: $Green;
+                }
+            }
+
+            .row {
+                .col-lg-3 {
+                    .quote-card {
+                        background-color: $Grey;
+
+                        img {
+                            object-fit: cover;
+                            width: 100%;
+                        }
+                    }
+                    .d-flex {
+                        p {
+                            font-weight: 600;
+                        }
+                        button {
+                            white-space: nowrap;
+                            font-size: 0.8rem;
+                            background-color: $Green;
+                            border-radius: 10px;
+                            color: #FFF;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
