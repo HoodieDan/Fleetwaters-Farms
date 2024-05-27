@@ -30,6 +30,10 @@ nav {
             }
         }
 
+        .logo {
+            z-index: 1000;
+        }
+
         .mid-links {
             .nav-link {
                 color: $HeaderColor;
@@ -72,5 +76,114 @@ nav {
                 }
             }
         }
+
+        div.hamburger-react {
+            display: none;
+            z-index: 1000;
+            div {
+                background-color: $TextColor !important;
+
+                &:nth-of-type(2) {
+                    height: 2px !important;
+                }
+            }
+        }
+    }
+}
+
+div.backdrop.mobile {
+    display: none;
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    backdrop-filter: blur(5px);
+    transition: all 0.5s;
+    z-index: 10;
+
+    aside {
+        background-color: #FFF;
+        height: 100vh;
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        position: absolute;
+        top: 0;
+        left: 0;
+        text-align: center;
+        z-index: 10;
+        padding: 5rem 1rem 8rem;
+        animation: openNav 0.3s ease-in-out 0 alternate;
+
+        .nav-link {
+            color: $TextColor;
+        }
+
+        .dropdown {
+            position: relative;
+            align-self: center;
+
+            .dropdown-links {
+                box-shadow: 0px 10px 30px 0px #1010102B;
+                position: absolute;
+                top: 100%;
+                display: flex;
+                flex-direction: column;
+                border-radius: 6px;
+                animation: show 0.3s ease-in-out;
+                display: none;
+                left: -1rem;
+                z-index: 10;
+                background-color: #FFF;
+
+                .dropdown-link {
+                    padding: 0.7rem 2.8rem;
+                    color: $HeaderColor;
+                    transition: all 0.5s ease-out;
+
+                    &:hover {
+                        background-color: $InputBG;
+                    }
+                }
+                
+            }
+
+            &:hover .dropdown-links {
+                display: flex;
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    div.right-links {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        position: sticky;
+        z-index: 1000;
+        top: 0;
+        background-color: #FFF;
+        
+        div.top {
+            display: none;
+        }
+        .container.nav {  
+            div.mid-links {
+                display: none !important;
+            }
+            div.hamburger-react {
+                display: inline-block;
+            }
+        }
+    }
+    div.backdrop.mobile {
+        display: block;
     }
 }

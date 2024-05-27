@@ -57,6 +57,14 @@ div.contact {
     }
 }
 
+@media (max-width: 768px) {
+    div.contact {
+        div.header {
+            background-position: 70% 50%;
+        }
+    }
+}
+
 @media (max-width: 575px) {
     .col-lg-6 {
         padding: 1rem !important;

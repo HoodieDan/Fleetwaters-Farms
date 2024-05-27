@@ -4,36 +4,107 @@ div.hero {
     height: 85vh;
     background-image: url('../images/hero-bg.png');
     background-size: cover;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 
-    .content {
-        color: #FFF;
-        width: 40%;
+    div.vignette {
+        height: 85vh;
+        width: 100%;
+        background-image: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
 
-        h1 {
-            font-weight: 700;
-        }
+        .content {
+            color: #FFF;
+            width: 40%;
+    
+            h1 {
+                font-weight: 700;
+            }
+    
+            p {
+                width: 70%;
+                font-weight: 350;
+            }
 
-        p {
-            width: 70%;
-            font-weight: 350;
-        }
-
-        button {
-            background-color: #FFF;
-            font-size: 0.8rem;
-            color: $Green;
-            border-radius: 32px;
-            font-weight: 500;
-
-            .arrow-right {
-                height: 1.2rem;
-                position: relative;
-                bottom: 0.05rem;
-                left: 0.1rem;
+            .mobile {
+                display: none;
+            }
+    
+            button {
+                background-color: #FFF;
+                font-size: 0.8rem;
+                color: $Green;
+                border-radius: 32px;
+                font-weight: 500;
+    
+                .arrow-right {
+                    height: 1.2rem;
+                    position: relative;
+                    bottom: 0.05rem;
+                    left: 0.1rem;
+                }
             }
         }
+    }
+
+}
+
+@media (max-width: 1024px) {
+    div.hero {
+        background-position: 50% 0;
+
+        .vignette {
+            .container {
+                .content {
+                    width: 50%;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    div.hero {
+        background-image: url('../images/hero-bg-mobile.png');
+        background-position: 50% 30%;
+
+        div.vignette {
+            height: 85vh;
+            width: 100%;
+            background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+            justify-content: end;
+            padding-bottom: 3rem;
+
+            div.content {
+                width: 100% !important;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+    
+                h1 {
+                    font-weight: 700;
+                }
+        
+                p {
+                    width: 100%;
+                    font-weight: 350;
+                }
+
+                .mobile {
+                    display: block;
+                }
+
+                .desktop {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 420px) {
+    div.hero {
+        background-position: 50% 0;
     }
 }

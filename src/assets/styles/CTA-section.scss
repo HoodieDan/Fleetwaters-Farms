@@ -94,6 +94,13 @@ div.cta {
                         width: 100%;
                         object-fit: contain;
                     }
+
+                    &:nth-of-type(2) {
+                        padding: 0 !important;
+                    }
+                }
+                .p-5 {
+                    padding: 4rem !important;
                 }
             }
         }

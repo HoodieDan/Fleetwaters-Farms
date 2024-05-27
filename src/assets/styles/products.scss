@@ -83,3 +83,11 @@ div.product {
         }
     }
 }
+
+@media (max-width: 768px) {
+    div.product {
+        div.header {
+            background-position: 70% 50%;
+        }
+    }
+}
