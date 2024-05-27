@@ -1,0 +1,67 @@
+@import './mixins.scss';
+
+div.products {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    background-image: url('../images/products-bg.png');
+    background-size: cover;
+
+    div.container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h4 {
+            color: $Green;
+            font-weight: 600;
+        }
+    
+        p {
+            text-align: center;
+            color: $DarkGrey;
+            width: 30%;
+        }
+
+        .row {
+            width: 100%;
+            justify-content: center;
+
+            .col-lg-2 {
+                border: 1px solid $DivBorder;
+                border-radius: 20px;
+                padding: 1.5rem 1rem 1rem;
+                background-color: #FFF;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-bottom: 1rem;
+                text-align: center;
+
+                .yellow {
+                    width: 100%;
+                    aspect-ratio: 1/1;
+                    border-radius: 50%;
+                    background-color: $Yellow;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    img {
+                        transform: scale(0.8);
+                    }
+                }
+
+                p {
+                    font-size: 0.8rem;
+                    color: $TextColor;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    p {
+        width: 100% !important;
+    }
+}

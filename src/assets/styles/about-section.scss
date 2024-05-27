@@ -1,0 +1,53 @@
+@import './mixins.scss';
+
+div.about {
+    margin: 2rem 2.5rem;
+    padding: 1.5rem 3rem;
+    background-image: url('../images/about-bg.png');
+
+    .row {
+        .col-lg-4 {
+            h4 {
+                font-weight: 600;
+                color: $Green;
+            }
+        }
+        .col-lg-5 {
+            display: flex;
+            justify-content: center;
+
+            .dots {
+                position: absolute;
+                top: 0rem;
+                right: 2rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .dots {
+        width: 4rem;
+        top: 1rem !important;
+        right: 1rem !important;
+    }
+}
+
+@media (max-width:768px) {
+    div.about {
+        margin: 0;
+        padding: 2rem 1rem;
+
+        .row {
+            .col-lg-4 {
+                padding: 1rem;
+                text-align: center;
+            }
+            .col-lg-5 {
+                .dots {
+                    right: 4rem !important;
+                }
+            }
+        }
+    }
+}
