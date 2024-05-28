@@ -3,14 +3,35 @@ import cows from '../assets/images/cows.png'
 import pigs from '../assets/images/pigs.png'
 import sheep from '../assets/images/sheep.png'
 import goats from '../assets/images/goats.png'
+import { gsap } from 'gsap';
+import SplitType from 'split-type';
+import { useEffect } from 'react';
 
 function Livestock() {
+
+    useEffect(()=> {
+        new SplitType('.reveal-header')
+        new SplitType('.reveal-text')
+
+        const timeline = gsap.timeline({ ease: 'Expo.easeOutIn', duration: 0.7, delay:0 })
+
+        timeline.fromTo('.reveal-header', { y:'2.5rem', opacity: 0 }, { y:0, stagger: 0.05, delay: 0.1, opacity: 1, })
+        timeline.fromTo('.reveal-text', { y:'2.5rem', opacity: 0 }, { y:0, stagger: 0.05, delay: 0.1, opacity: 1, })
+        timeline.fromTo('.content', { y:'2.5rem', opacity: 0 }, { y:0, stagger: 0.05, delay: 0.1, opacity: 1, })
+        gsap.fromTo('.head', { y:'2.5rem', opacity: 0 }, { y:0, stagger: 0.05, delay: 0.3, opacity: 1, scrollTrigger: {
+            trigger: '.head'
+        } })
+        gsap.fromTo('.col-lg-3', { x:'2.5rem', opacity: 0 }, { x:0, ease: 'Expo.easeOutIn', stagger: 0.5, delay: 0.7, opacity: 1,scrollTrigger: {
+            trigger: '.col-lg-3',
+        } })
+    }, [])
+
     return (
         <div className="livestock product">
             <div className="livestock-header header">
                 <div className="container">
-                    <h2 className='mb-3'>Livestock</h2>
-                    <p>We offer quality livestock products available for pickup or delivery</p>
+                    <h2 className='mb-3 reveal-header'>Livestock</h2>
+                    <p className='reveal-text'>We offer quality livestock products available for pickup or delivery</p>
                 </div>
             </div>
 

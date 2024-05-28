@@ -2,14 +2,28 @@ import '../assets/styles/contact.scss';
 import location from '../assets/images/location.png'
 import phone from '../assets/images/phone.png'
 import mail from '../assets/images/mail.png'
+import { gsap } from 'gsap';
+import SplitType from 'split-type';
+import { useEffect } from 'react';
 
 function Contact() {
+
+    useEffect(()=> {
+        new SplitType('.reveal-header')
+        new SplitType('.reveal-text')
+
+        const timeline = gsap.timeline({ ease: 'Expo.easeOutIn', duration: 0.7, delay:0 })
+
+        timeline.fromTo('.reveal-header', { y:'2.5rem', opacity: 0 }, { y:0, stagger: 0.05, delay: 0.1, opacity: 1, })
+        timeline.fromTo('.reveal-text', { y:'2.5rem', opacity: 0 }, { y:0, stagger: 0.05, delay: 0.1, opacity: 1, })
+    }, [])
+
     return (
         <div className="contact">
             <div className="header">
                 <div className="container">
-                    <h2 className='mb-3'>Contact Us</h2>
-                    <p>Contact us today to make enquiries.</p>
+                    <h2 className='mb-3 reveal-header'>Contact Us</h2>
+                    <p className='reveal-text'>Contact us today to make enquiries.</p>
                 </div>
             </div>
 

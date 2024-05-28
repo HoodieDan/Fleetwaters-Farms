@@ -15,12 +15,14 @@
     "@mui/icons-material": "^5.15.18",
     "@mui/material": "^5.15.18",
     "bootstrap": "^5.3.3",
+    "gsap": "^3.12.5",
     "hamburger-react": "^2.5.1",
     "react": "^18.2.0",
     "react-bootstrap": "^2.10.2",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.23.1",
-    "sass": "^1.77.2"
+    "sass": "^1.77.2",
+    "split-type": "^0.3.4"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",

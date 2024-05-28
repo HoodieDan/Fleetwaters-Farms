@@ -3,14 +3,35 @@ import rice from '../assets/images/rice.png'
 import wheat from '../assets/images/wheat.png'
 import vegetable from '../assets/images/vegetable.png'
 import corn from '../assets/images/corn.png'
+import { gsap } from 'gsap';
+import SplitType from 'split-type';
+import { useEffect } from 'react';
 
 function Crops() {
+
+    useEffect(()=> {
+        new SplitType('.reveal-header')
+        new SplitType('.reveal-text')
+
+        const timeline = gsap.timeline({ ease: 'Expo.easeOutIn', duration: 0.7, delay:0 })
+
+        timeline.fromTo('.reveal-header', { y:'2.5rem', opacity: 0 }, { y:0, stagger: 0.05, delay: 0.1, opacity: 1, })
+        timeline.fromTo('.reveal-text', { y:'2.5rem', opacity: 0 }, { y:0, stagger: 0.05, delay: 0.1, opacity: 1, })
+        timeline.fromTo('.content', { y:'2.5rem', opacity: 0 }, { y:0, stagger: 0.05, delay: 0.1, opacity: 1, })
+        gsap.fromTo('.head', { y:'2.5rem', opacity: 0 }, { y:0, stagger: 0.05, delay: 0.3, opacity: 1, scrollTrigger: {
+            trigger: '.head'
+        } })
+        gsap.fromTo('.col-lg-3', { x:'2.5rem', opacity: 0 }, { x:0, ease: 'Expo.easeOutIn', stagger: 0.5, delay: 0.7, opacity: 1,scrollTrigger: {
+            trigger: '.col-lg-3',
+        } })
+    }, [])
+
     return (
         <div className="crops product">
             <div className="crops-header header">
                 <div className="container">
-                    <h2 className='mb-3'>Crops</h2>
-                    <p>We offer quality crop products available for pickup or delivery</p>
+                    <h2 className='mb-3 reveal-header'>Crops</h2>
+                    <p className='reveal-text'>We offer quality crop products available for pickup or delivery</p>
                 </div>
             </div>
 
