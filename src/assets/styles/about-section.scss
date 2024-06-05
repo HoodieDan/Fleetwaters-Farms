@@ -4,6 +4,8 @@ div.about {
     margin: 2rem 2.5rem;
     padding: 1.5rem 3rem;
     background-image: url('../images/about-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
 
     .row {
         .col-lg-4 {

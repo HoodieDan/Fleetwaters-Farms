@@ -14,13 +14,13 @@ function ProductsSection() {
 
     useEffect(() => {
 
-        new SplitType('.header')
+        new SplitType('.product-header')
 
-        gsap.fromTo('.header', { y:'2.5rem', opacity: 0 }, { y:0, ease: 'Expo.easeOutIn', stagger: 0.5, delay: 0.5, opacity: 1, scrollTrigger: {
-            trigger: '.header',
+        gsap.fromTo('.product-header', { y:'2.5rem', opacity: 0 }, { y:0, ease: 'Expo.easeOutIn', stagger: 0.5, delay: 0.5, opacity: 1, scrollTrigger: {
+            trigger: '.product-header',
         } })
-        gsap.fromTo('.text', { y:'2.5rem', opacity: 0 }, { y:0, ease: 'Expo.easeOutIn', stagger: 0.5, delay: 0.7, opacity: 1,scrollTrigger: {
-            trigger: '.text',
+        gsap.fromTo('.product-text', { y:'2.5rem', opacity: 0 }, { y:0, ease: 'Expo.easeOutIn', stagger: 0.5, delay: 0.7, opacity: 1,scrollTrigger: {
+            trigger: '.product-text',
         } })
         gsap.fromTo('.col-lg-2.col-md-3', { x:'2.5rem', opacity: 0 }, { x:0, ease: 'Expo.easeOutIn', stagger: 0.5, delay: 0.7, opacity: 1,scrollTrigger: {
             trigger: '.col-lg-2.col-md-3',
@@ -31,8 +31,8 @@ function ProductsSection() {
     return (
         <div className="products">
             <div className="container">
-                <h4 className='mb-3 header'>Our Products</h4>
-                <p className="mb-5 text">All our products are organically grown and groomed with the best materials.</p>
+                <h4 className='mb-3 product-header'>Our Products</h4>
+                <p className="mb-5 product-text">All our products are organically grown and groomed with the best materials.</p>
 
                 <div className="row">
                     <div className="col-lg-2 col-md-3 col-auto me-3">
