@@ -1,0 +1,60 @@
+@import './mixins.scss';
+
+div.about-page {
+    .header {
+        padding: 5rem 2rem;
+        color: #FFF;
+        background-image: url('../images/about-page-bg.png');
+        background-position: 0% 50%;
+        background-size: cover;
+
+        .container {
+            h2 {
+                font-weight: 700;
+            }
+        }
+    }
+    .container { 
+        .row {
+            justify-content: stretch;
+            position: relative;
+            .grey {
+                position: absolute;
+                background-color: $Grey;
+                left: -50%;
+                height: 100%;
+            }
+            .started {
+                background-color: $Grey;
+            }
+            .started-left {
+                display: flex;
+                align-items: center;
+                .started-image {
+                    width: 100%;
+                    right: 4rem;
+                }
+            }
+        }
+        .vision-mission {
+            width: 100%;
+            .vm-box {
+                width: 40%;
+                background-color: $Green;
+                color: #FFF;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                background-color: $Green;
+                border-radius: 10px;
+
+                .icon {
+                    height: 2rem;
+                    width: 2rem;
+                }
+            }
+        }
+    }
+}
