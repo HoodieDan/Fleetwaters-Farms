@@ -6,6 +6,9 @@ import teamwork from '../assets/images/teamwork.svg';
 import respect from '../assets/images/respect.svg';
 import excellence from '../assets/images/excellence.svg';
 import safety from '../assets/images/safety.svg';
+import csr from '../assets/images/csr.png';
+import csrBadge from '../assets/images/csr-badge.png';
+import methodImage from '../assets/images/method-img.png';
 
 export default function AboutPage() {
   return (
@@ -76,9 +79,9 @@ export default function AboutPage() {
 
         <section className="values text-center mb-5 mt-5">
           <h2>Our Values</h2>
-          <h6 className='company-values mb-3'>COMPANY VALUES</h6>
+          <h6 className='green mb-3'>COMPANY VALUES</h6>
 
-          <div className="values-bg p-5">
+          <div className="values-bg p-lg-5 pt-5 pb-5">
             <div className="container">
               <div className="row">
                 <div className="col-lg-4 col-md-6 p-3 column">
@@ -117,6 +120,78 @@ export default function AboutPage() {
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="csr container">
+          <div className="text-center mb-3">
+            <h2>Our CSR</h2>
+            <h6 className='green'>CORPORATE SOCIAL RESPONSIBILITY</h6>
+          </div>
+
+          <div className="row justify-content-center mt-5 mb-5">
+            <div className="col-lg-6 pe-lg-5 d-flex align-items-center">
+              <p>Fleetwaters believes that with its own growth and success, the community 
+                within which it operates should simultaneously benefit. We participate in 
+                several community development projects independently or  in partnership 
+                with non-profit organisations on a continuous basis investing in community 
+                centers, Enterprise and Entrepreneurial Skills Development programmes, 
+                Education and welfare for orphans and the underprivileged persons, youth 
+                development programs and disaster relief projects wherever a crisis may exist.
+              </p>
+            </div>
+            <div className="col-lg-6 d-flex align-items-center">
+              <img src={csr} alt="image of volunteers" className='img-fluid mb-5' />
+              <img src={csrBadge} alt="csr badge" className='csr-badge' />
+            </div>
+          </div>
+        </section>
+
+        <section className="method container mb-5">
+          <div className="text-center mb-3">
+            <h2>Our Method</h2>
+            <h6 className='green'>HEALTH SAFETY AND ENVIRONMENT</h6>
+          </div>
+
+          <div className="row justify-content-center mt-5 mb-5">
+            <div className="col-lg-6 d-flex align-items-center">
+              <img src={methodImage} alt="image of farmer" className='img-fluid' />       
+            </div>
+            <div className="col-lg-6 d-flex align-items-center">
+              <ul>
+                <li>
+                  We ask to prevent accidental injuries of employees and third parties, 
+                  material damage, and damage the environment as much as possible.
+                </li>
+                <li>
+                  We continually work at improving working condition and environmental
+                  protection while carry out operations in a socially responsible and ethical manner
+                </li>
+                <li>
+                  The supply and removal of waste materials that are detrimental
+                  to the environment are properly carried out.
+                </li>
+                <li>
+                  Ensure that adequate contingency plans are in place to mitigate
+                  the effect of safety incidents and emergencies.
+                </li>
+                <li>
+                  Give adequate attention to driving back safety risks over the hazards.
+                </li>
+                <li>
+                  To minimize the number of absence of days caused by industrial accident
+                  and poor working conditions and to take care of all employees taken ill.
+                </li>
+                <li>
+                  Safety starts with each of us, every employee both in our employ or acting 
+                  as sub contractor is responsible for the safe and solid execution of his 
+                  task, adhering to our safety policy guidelines. This, the management will 
+                  promote strictly, through training, information and providing the appropriate 
+                  resources and this policy will be reviewed periodically and modified, if 
+                  deemed fit, to meet new challenges.
+                </li>
+              </ul>
             </div>
           </div>
         </section>
