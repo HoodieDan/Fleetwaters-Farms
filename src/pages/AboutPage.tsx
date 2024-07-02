@@ -1,6 +1,5 @@
 import '../assets/styles/about-page.scss';
 import manInFarm from '../assets/images/man-in-farm.png';
-import DiamondOutlinedIcon from '@mui/icons-material/DiamondOutlined';
 import integrity from '../assets/images/integrity.svg';
 import teamwork from '../assets/images/teamwork.svg';
 import respect from '../assets/images/respect.svg';
@@ -9,6 +8,11 @@ import safety from '../assets/images/safety.svg';
 import csr from '../assets/images/csr.png';
 import csrBadge from '../assets/images/csr-badge.png';
 import methodImage from '../assets/images/method-img.png';
+import teamBG from '../assets/images/team-bg-2.png';
+import ceoImage from '../assets/images/ceo-image.png';
+import bdmImage from '../assets/images/bdm-image.png';
+import binoculars from '../assets/images/binoculars.svg';
+import gemstone from '../assets/images/gemstone.svg';
 
 export default function AboutPage() {
   return (
@@ -65,12 +69,12 @@ export default function AboutPage() {
         <section className="container">
           <div className="vision-mission d-flex justify-content-around mt-5 mb-5">
             <div className="vm-box mt-5 mb-5 p-4">
-              <DiamondOutlinedIcon className='icon' />
+              <img src={binoculars} alt="binoculars" className='icon' />
               <h3>Our Vision</h3>
               <p>To be a leading energy trading and servicing company that will deliver superior services to its clients</p>
             </div>
             <div className="vm-box mt-5 mb-5 p-4">
-              <DiamondOutlinedIcon className='icon' />
+              <img src={gemstone} alt="gemstone" className='icon' />
               <h3>Our Mission</h3>
               <p>To perpetuate an excellent customer service driven organization, through commitment, loyalty and sound return to our Stakeholders; and socially responsible to the communities where we live and work.</p>
             </div>
@@ -192,6 +196,40 @@ export default function AboutPage() {
                   deemed fit, to meet new challenges.
                 </li>
               </ul>
+            </div>
+          </div>
+        </section>
+
+        <section className="team pt-5 pb-5">
+          <img src={teamBG} alt="leaves bg" className='bg-1 bg' />
+          <img src={teamBG} alt="leaves bg" className='bg-2 bg' />
+          <div className="container">
+            <div className="mb-3 text-center">
+              <h2>Our Team</h2>
+              <h6 className='green'>MEET OUR TEAM</h6>
+            </div>
+
+            <div className="row mt-5 mb-5">
+              <div className="col-lg-3 col-md-6 text-center">
+                <img src={ceoImage} alt="ceo image" />
+                <h6 className='mt-3 mb-2'>Godstime Akarah</h6>
+                <p className="grey-text">MD/CEO</p>
+              </div>
+              <div className="col-lg-3 col-md-6 text-center">
+                <img src={bdmImage} alt="bdm image" />
+                <h6 className='mt-3 mb-2'>Christopher Oghenetega</h6>
+                <p className="grey-text">Business Development Manager</p>
+              </div>
+              <div className="col-lg-3 col-md-6 text-center">
+                <img src={ceoImage} alt="ceo image" />
+                <h6 className='mt-3 mb-2'>Francis Ebanehita</h6>
+                <p className="grey-text">Head of Operations</p>
+              </div>
+              <div className="col-lg-3 col-md-6 text-center">
+                <img src={ceoImage} alt="ceo image" />
+                <h6 className='mt-3 mb-2'>Innocent Avanoma</h6>
+                <p className="grey-text">Farm Manager</p>
+              </div>
             </div>
           </div>
         </section>

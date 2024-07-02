@@ -52,6 +52,10 @@ p {
     color: #04491D;
 }
 
+.grey-text {
+    color: #727272;
+}
+
 @keyframes show {
     0% {
         opacity: 0;
