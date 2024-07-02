@@ -14,7 +14,7 @@ div.about-page {
             }
         }
     }
-    .container { 
+    .contain { 
         .row {
             justify-content: stretch;
             position: relative;
@@ -53,6 +53,34 @@ div.about-page {
                 .icon {
                     height: 2rem;
                     width: 2rem;
+                }
+            }
+        }
+        .values {
+            .company-values {
+                color: $Green;
+            }
+            .values-bg {
+                background-color: $AboutValues;
+                .container {
+                    .row {
+                        justify-content: center;
+                        .column {
+                            .value-card {
+                                background-color: #FFF;
+                                border-radius: 10px;
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                text-align: left;
+                                height: 100%;
+                                .value-svg {
+                                    height: 2.5rem;
+                                    width: 2.5rem;
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }

@@ -36,21 +36,21 @@ function FooterSection() {
                         </div>
                     </div>
                     <div className="col-lg-2">
-                        <h5 className='mb-3'>Quick Links</h5>
+                        <h6 className='mb-3'>Quick Links</h6>
                         <NavLink to='/' className='link'>About Us</NavLink>
                         <NavLink to='/'  className='link'>Products</NavLink>
                         <NavLink to='/'  className='link'>Livestock</NavLink>
                         <NavLink to='/'  className='link'>Contact Us</NavLink>
                     </div>
                     <div className="col-lg-2">
-                        <h5 className='mb-3'>Other Pages</h5>
+                        <h6 className='mb-3'>Other Pages</h6>
                         <NavLink to='/'  className='link'>Privacy Policy</NavLink>
                         <NavLink to='/'  className='link'>Products</NavLink>
                         <NavLink to='/'  className='link'>Terms of Use</NavLink>
                         <NavLink to='/'  className='link'>FAQ</NavLink>
                     </div>
                     <div className="col-lg-4">
-                        <h5 className='mb-3'>Contact Info</h5>
+                        <h6 className='mb-3'>Contact Info</h6>
                         <div className="d-flex align-items-center mb-3">
                             <img src={location} alt="location" className='contact-icon' />
                             <p className='mb-0'>The Fleetwaters farms, off Ajah, Lagos, Nigeria</p>
